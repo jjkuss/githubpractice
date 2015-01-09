@@ -1,0 +1,35 @@
+.h2 {
+    border:none;
+    @include rem(padding, 0 0 0.867 0); //13px
+    margin: 0;
+    font-family: $sans-font;
+    @include rem(font-size, 1.6); //24px
+    line-height: 1.125; //16px
+    font-weight: bold;
+    color: #000;
+}
+
+.h2--bottom-rule {
+    border-bottom: 1px solid #dbdbdb;
+    @include rem(margin-bottom, 1);
+}
+
+.h2--secondary {
+    color: #408800;
+}
+
+.responsive-dense
+{
+    .h2
+    {
+        @include rem(font-size, 1.4); //21px
+        line-height: 1.143; //17px
+    }
+}
+
+@media (max-width: $breakpointSmall) {
+    .h2 {
+        @include rem(font-size, 1.4); //21px
+        line-height: 1.143; //17px
+    }
+ }

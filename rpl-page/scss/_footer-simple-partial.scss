@@ -1,0 +1,103 @@
+.footer-simple {
+    width: 100%;
+    background-color: #F0F0F0;
+    border-top: 1px solid #CCCCCC;
+    overflow: hidden;
+    position: relative;
+}
+
+.footer-simple--logo {
+    background: inline-image('../images/fid-black-logo.svg') left top no-repeat;
+    height: 33px;
+    width: 152px;
+    float: left;
+    @include rem(margin, 1 0 0 1.067); //15px 16px
+    position: absolute;
+}
+
+.no-svg .footer-simple--logo {
+    background: inline-image('../images/icon-fid-logo-footer-login-1x.png') left top no-repeat;
+}
+
+.footer-simple--logo-print {
+    display: none;
+}
+
+.footer-simple--text-section{
+    float:right;
+    @include rem(margin, 1 1.067); //19px, 16px
+    position: relative;
+}
+
+.footer-simple--text {
+    font-family: $sans-font;
+    @include rem(font-size, 0.8); //12px
+    line-height: 1.7; //25px
+    color: #666;
+    text-align: right;
+}
+
+.footer-simple--list {
+    margin: 0;
+    white-space:nowrap;
+}
+
+.footer-simple--list-item {
+    display: inline;
+    @include rem(font-size, 0.833); //12px
+}
+
+.footer-simple--list-item:before{
+    color: #989898;
+    @include rem(margin, 0 0.467); //7px
+    content:'|';
+}
+
+.footer-simple--list-item:first-child:before{
+    content:'';
+    margin: 0;
+}
+
+.footer-simple--link {
+    @include rem(padding, 0.533 0); //8px
+    white-space: nowrap;
+}
+
+.footer-simple--disclaimer {
+    line-height: 2;
+}
+
+.footer-simple--member-text {
+    display: none;
+    line-height: 2;
+    color: #000;
+}
+
+@media (max-width: $breakpointSmall) {
+    .footer-simple--logo {
+        float: none;
+        position: relative;
+        @include rem(margin-left, $gutterPadding);//8px
+    }
+
+    .footer-simple--text-section {
+        float: none;
+        @include rem(margin-left, $gutterPadding);//8px
+        @include rem(margin-top, 1.3); //20px
+    }
+    .footer-simple--text{
+        text-align:left;
+    }
+    .footer-simple--list {
+        padding:0;
+    }
+ }
+
+@media print {
+.footer-simple--logo-print {
+    display: block;
+    }
+.footer-simple--member-text {
+    display: block;
+    }
+}

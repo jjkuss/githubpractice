@@ -1,0 +1,10 @@
+$breakpointSmall: 490px !default;
+$baseFontSizePX: 15 !default;
+$gutterPadding: 0.533 !default;
+$serif-font: Cambria, Georgia, serif !default;
+$sans-font: Helvetica, Arial, sans-serif !default;
+$base-font-size: 1em !default;
+$breakpointSmall: 490px !default;
+
+@import "_utility";
+@import "footer-simple-partial";

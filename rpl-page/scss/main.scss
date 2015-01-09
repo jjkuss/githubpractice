@@ -1,0 +1,17 @@
+@import "_main-rpl-common";
+@import "_header-navless-partial";
+@import "_topic-path-partial";
+@import "_footer-simple-partial";
+@import "_h1-main";
+@import "_h2";
+@import "_h3";
+@import "_paragraph";
+@import "_list-unordered";
+body {background-color: #f0f0f0;}
+body > .fidgrid:first-child {background-color: #FFF};
+@media only screen and (min-width: 600px) {
+    div[role="main"] {
+        min-height: 463px;
+    }
+}
+

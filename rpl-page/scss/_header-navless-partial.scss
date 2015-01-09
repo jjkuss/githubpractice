@@ -1,0 +1,74 @@
+.header-navless {
+  background: #408800;
+  display: inline-block;
+  width: 100%;
+  @include rem(min-height, 2.933); //44px
+  @include rem(height, 2.933); //44px
+  display: table;
+}
+
+.header-navless--logo {
+  display: table-cell;
+  vertical-align: middle;
+  height: 26px;
+  width: 127px;
+  background: inline-image('../images/Fid_Logo_Rev_solo.svg') 8px center no-repeat;
+  background-size: 119px 26px;
+}
+
+.header-navless--logo-print {
+  display: none;
+}
+
+.header-navless--additional-text {
+  text-align: right;
+  display: table-cell;
+  vertical-align: middle;
+  @include rem(padding, $gutterPadding $gutterPadding $gutterPadding 2.133)//8px 32px
+}
+
+.header-navless--title {
+  display: inline;
+  @include rem(font-size, 1.2); //18px
+  line-height: 1.400; //21px
+  font-family: $sans-font;
+  color: #FFFFFF;
+  background: inline-image('../images/lock.svg') 0 center no-repeat;
+  @include rem(padding-left, 1.067); //16px (size of icon + 8px padding)
+}
+
+.no-svg .header-navless--logo {
+    background: inline-image("../images/fidelity-logo-white-1x.png") 8px center no-repeat;
+}
+
+.no-svg .header-navless--title {
+    background: inline-image("../images/icon-lock-white-10x12.png") 0 center no-repeat;
+}
+
+.header-navless--title-text {
+  display: inline;
+}
+
+.header-navless--no-title .header-navless--title-text{
+  display: none;
+}
+
+.header-navless--no-lock .header-navless--title {
+  background-image: none;
+}
+
+@media (max-width: 480px) {
+  .header-navless--title-text {
+    @include rem(font-size, 1);
+    line-height: 1.2;
+  }
+}
+
+@media print {
+  .header-navless--additional-text {
+    width: 100%;
+  }
+  .header-navless--logo-print {
+    display: block;
+  }
+}

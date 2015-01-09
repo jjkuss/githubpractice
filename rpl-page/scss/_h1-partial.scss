@@ -1,0 +1,24 @@
+.h1 {
+    margin:0;
+    border:none;
+    @include rem(padding, 0 0 0.867 0); //13px
+    font-family: $sans-font;
+    @include rem(font-size, 2.2); //33px
+    line-height: 1.09; //16px
+    font-weight: normal;
+    color: #000;
+
+}
+
+//page layout class
+.responsive-dense .h1 {
+    @include rem(font-size, 1.8); //27px
+    line-height: 1.2; //18px
+}
+
+@media (max-width: $breakpointSmall) {
+    .h1 {
+        @include rem(font-size, 1.8); //27px
+        line-height: 1.2; //18px
+    }
+ }

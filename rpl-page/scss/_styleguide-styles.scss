@@ -1,0 +1,222 @@
+
+/*
+ * Fidelity Investments Style Guide Styles
+ *
+ * Copyright 2013 Fidelity Investments
+ */
+
+/* ==========================================================================
+   Style Guide Styles
+   ========================================================================== */
+html {
+    font-family: $serif-font;
+    font-size: 93.75%; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+    -ms-text-size-adjust: 100%; /* 2 */
+}
+
+body {
+	background-color: $body-background-color;
+    font-size: 1rem;
+	font-family: $sans-font;
+}
+
+a {
+    @include standard-link-treatment;
+}
+
+    a:hover {
+        @include hover-link-treatment;
+    }
+
+    a:active {
+        @include active-link-treatment;
+    }
+
+    a:focus {
+        @include focus-link-treatment;
+    }
+
+h1, h2, h3, h4 {
+    font-family: $sans-font;
+}
+
+th, td {
+    text-align: left;
+}
+
+
+/* === Begin utility classes === */
+
+.last {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.unbold {
+    font-weight: normal;
+}
+
+.emphasis {
+    font-style: italic;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.grey-hr {
+    border-bottom: 1px solid #DBDCDE;
+    clear: both;
+    height: 1px;
+    margin: 0;
+    padding: 0;
+}
+
+.hr-for-ie {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.hidden-form {
+    display: none;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.popup-icon {
+    margin: 0px 0px 0px 6px !important;
+    padding: 0px 0px 0px 0px !important;
+    float: none !important;
+}
+
+.sprite-inline {
+    display: inline-block !important;
+    padding-right: 7px;
+    vertical-align: middle;
+}
+/* Class to be used when sprite appears inline within an <li>, replacing the standard bullet, also makes sprite image visible within the <span> element */
+.sprite-inline-text {
+    display: inline-block !important;
+    vertical-align: middle;
+}
+/* Class to be used when sprite is needed within text element such as a <p>, also makes sprite image visible within the <span> element */
+.sprite-linkable {
+    cursor: pointer;
+}
+/* Can be applied to a span where the sprite is implemented or to an <a> tag that bounds a "sprited" span, without there will be no cursor change to a pointer */
+.comp-stacked {
+    padding-bottom: 0 !important;
+    border-bottom: none !important;
+}
+
+/* === End utility classes === */
+
+
+.legend {
+    font-size: .75em;
+    color: #666666;
+    margin-top: .9375em;
+}
+
+.attribution {
+    font-family: $sans-font;
+    color: $attribution-color;
+    text-transform: uppercase;
+    font-size: 0.666666em;
+    line-height: 1.3;
+    font-weight: bold;
+}
+
+.color-positive {
+    color: $up-color;
+}
+
+.color-negative {
+    color: $down-color;
+}
+
+.background-positive {
+    background: $up-color;
+}
+
+.background-negative {
+    background: $down-color;
+}
+
+.fid-text--right {
+    text-align: right;
+}
+
+.fid-text--left {
+    text-align: left;
+}
+
+.fid-text--strong {
+    font-weight: bold;
+}
+
+.message {
+    background: #FFF;
+    border-style: solid;
+    border-width: 2px;
+    clear: both;
+    overflow: hidden;
+    padding: 10px 10px 15px 10px;
+    margin-bottom: 18px;
+}
+
+.message--icon {
+    display: block;
+    float: left;
+    margin-top: 3px;
+}
+
+.message--content {
+    margin-left: 25px;
+}
+
+    .message--title, .message--content > p, .message--list {
+        font-size: 1em;
+        font-weight: normal;
+        line-height: 1.4;
+        padding-bottom: 8px;
+    }
+
+.message--list {
+    padding-left: 20px;
+}
+
+    .message--list > li {
+        padding-bottom: 8px;
+        list-style: square;
+    }
+
+.message--error {
+    border-color: #cc0000;
+}
+
+    .message--error p, .message--error .message--title {
+        color: #cc0000;
+    }
+
+.message--warning {
+    border-color: #F0D202;
+}

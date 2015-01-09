@@ -1,0 +1,1448 @@
+.nopad {
+  padding: 0 !important;
+}
+
+.nodisplay {
+  display: none !important;
+}
+
+.noborder {
+  border: none !important;
+}
+
+/* === Begin utility classes === */
+.last {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.unbold {
+  font-weight: normal;
+}
+
+.emphasis {
+  font-style: italic;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.grey-hr {
+  border-bottom: 1px solid #DBDCDE;
+  clear: both;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+}
+
+.hr-for-ie {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.hidden-form {
+  display: none;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.popup-icon {
+  margin: 0px 0px 0px 6px !important;
+  padding: 0px 0px 0px 0px !important;
+  float: none !important;
+}
+
+.sprite-inline {
+  display: inline-block !important;
+  padding-right: 7px;
+  vertical-align: middle;
+}
+
+/* Class to be used when sprite appears inline within an <li>, replacing the standard bullet, also makes sprite image visible within the <span> element */
+.sprite-inline-text {
+  display: inline-block !important;
+  vertical-align: middle;
+}
+
+/* Class to be used when sprite is needed within text element such as a <p>, also makes sprite image visible within the <span> element */
+.sprite-linkable {
+  cursor: pointer;
+}
+
+/* Can be applied to a span where the sprite is implemented or to an <a> tag that bounds a "sprited" span, without there will be no cursor change to a pointer */
+.comp-stacked {
+  padding-bottom: 0 !important;
+  border-bottom: none !important;
+}
+
+/* === End utility classes === */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.fidgrid--col-full {
+  width: 100%;
+}
+
+.fidgrid--col-three-quarter {
+  width: 75%;
+}
+
+.fidgrid--col-two-thirds {
+  width: 66.67%;
+}
+
+.fidgrid--col-half {
+  width: 50%;
+}
+
+.fidgrid--col-third {
+  width: 33.33%;
+}
+
+.fidgrid--col-quarter {
+  width: 25%;
+}
+
+.fidgrid--col-eighth {
+  width: 12.5%;
+}
+
+.fidgrid--col-sixteenth {
+  width: 6.25%;
+}
+
+.fidgrid, .fidgrid--row, .fidgrid--col {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.fidgrid--shadow {
+  border: 1px solid #999999 \9;
+  -webkit-box-shadow: 0 0 8px 2px #999999;
+  box-shadow: 0 0 8px 2px #999999;
+  margin: 0 auto 40px;
+}
+
+.fidgrid {
+  width/*\**/: 1140px\9;
+  max-width: 76em;
+  margin-top: 0;
+  margin-left: auto;
+  margin-bottom: 0;
+  margin-right: auto;
+  /* Nested Grids */
+}
+.fidgrid .fidgrid {
+  width: 100%;
+}
+
+.fidgrid--row {
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  *zoom: 1;
+}
+.fidgrid--row.fidgrid--row-has-col-rules {
+  overflow: hidden;
+}
+.fidgrid--row:before, .fidgrid--row:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.fidgrid--row:after {
+  clear: both;
+}
+.fidgrid--row.fidgrid--row-bottom-ruled {
+  border-bottom: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #DBDBDB;
+}
+.fidgrid--row.fidgrid--row-bottom-ruled-dotted {
+  border-bottom: 1px;
+  border-bottom-style: dotted;
+  border-bottom-color: #DBDBDB;
+}
+.fidgrid--row.fidgrid--row-margin {
+  margin: 0 7.995px;
+  margin: 0 0.533rem;
+}
+.fidgrid--row.fidgrid--row-margin-right {
+  margin-right: 7.995px;
+  margin-right: 0.533rem;
+}
+.fidgrid--row.fidgrid--row-margin-left {
+  margin-left: 7.995px;
+  margin-left: 0.533rem;
+}
+.fidgrid--row .fidgrid--row {
+  margin-bottom: 0;
+}
+.fidgrid--row .fidgrid--col {
+  float: left;
+  padding: 7.995px;
+  padding: 0.533rem;
+  border-left-width: 1px;
+  border-left-style: none;
+  border-left-color: transparent;
+}
+.fidgrid--row .fidgrid--col.fidgrid--left-ruled {
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: #CCCCCC;
+  margin-bottom: -14985px;
+  margin-bottom: -999rem;
+  padding-bottom: 14985px;
+  padding-bottom: 999rem;
+}
+.fidgrid--row .fidgrid--col.fidgrid--left-ruled:first-child {
+  border-left: 1px none transparent;
+}
+.fidgrid--row .fidgrid--col.fidgrid--right-ruled {
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: #CCCCCC;
+  margin-bottom: -14985px;
+  margin-bottom: -999rem;
+  padding-bottom: 14985px;
+  padding-bottom: 999rem;
+}
+.fidgrid--row .fidgrid--col.fidgrid--right-ruled:first-child {
+  border-left: 1px none transparent;
+}
+.fidgrid--row .fidgrid--col.fidgrid--nogutter {
+  padding-right: 0;
+  padding-left: 0;
+}
+.fidgrid--row .fidgrid--col-border-left {
+  border-left: 1px solid #CCCCCC;
+}
+.fidgrid--row .fidgrid--col-border-right {
+  border-right: 1px solid #CCCCCC;
+}
+.fidgrid--row .fidgrid--col.nopad {
+  padding: 0;
+}
+.fidgrid--row .fidgrid--col.nopadleft {
+  padding-left: 0;
+}
+.fidgrid--row .fidgrid--col.nopadright {
+  padding-right: 0;
+}
+.fidgrid--row .fidgrid--col.nopadtop {
+  padding-top: 0;
+}
+.fidgrid--row .fidgrid--col.nopadbottom {
+  padding-bottom: 0;
+}
+.fidgrid--row .fidgrid--content {
+  word-wrap: break-word;
+}
+
+.fidgrid--col-left-fixed {
+  margin-right: 7.995px;
+  margin-right: 0.533rem;
+  width: 169px;
+}
+
+.fidgrid--col-right-fixed {
+  margin-left: 7.995px;
+  margin-left: 0.533rem;
+  width: 256px;
+}
+
+.fidgrid--row-has-left-fixed > .fidgrid--col-full {
+  margin-left: -176.995px;
+  padding-left: 176.995px;
+}
+
+.fidgrid--row-has-right-fixed > .fidgrid--col-full {
+  margin-right: -263.995px;
+  padding-right: 263.995px;
+}
+
+/* IE9, IE10 */
+@media screen and (min-width: 0 \0) {
+  .fidgrid {
+    width: auto;
+  }
+}
+@media only screen and (max-width: 490px) {
+  .fidgrid--row .fidgrid--col {
+    width: 100%;
+    min-width: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+  }
+
+  .fidgrid--row .fidgrid--col-left-fixed.fidgrid--col-left-fixed + .fidgrid--col,
+  .fidgrid--row .fidgrid--col-left-fixed.fidgrid--col-right-fixed + .fidgrid--col,
+  .fidgrid--row .fidgrid--col-right-fixed.fidgrid--col-left-fixed + .fidgrid--col,
+  .fidgrid--row .fidgrid--col-right-fixed.fidgrid--col-right-fixed + .fidgrid--col {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .fidgrid--row .fidgrid--content .fidgrid--row .fidgrid--content {
+    padding-right: 7.995px;
+    padding-right: 0.533rem;
+    padding-left: 7.995px;
+    padding-left: 0.533rem;
+  }
+}
+@media only screen and (min-width: 100em) {
+  .fidgrid.fidgrid--dense {
+    width: 98%;
+    max-width: 2000px;
+  }
+
+  .fidgrid.fidgrid--dense .fidgrid {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+/*! normalize.css v2.1.3 | MIT License | git.io/normalize */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined in IE 8/9.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 8/9.
+ */
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9.
+ * Hide the `template` element in IE, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background: transparent;
+}
+
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+a:focus {
+  outline: thin dotted;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Correct font family set oddly in Safari 5 and Chrome.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+pre {
+  white-space: pre-wrap;
+}
+
+/**
+ * Set consistent quote types.
+ */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9.
+ */
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+figure {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * 1. Correct font family not being inherited in all browsers.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+button,
+input {
+  line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*
+ * Fidelity Investments Style Guide Styles
+ *
+ * Copyright 2013 Fidelity Investments
+ */
+/* ==========================================================================
+   Style Guide Styles
+   ========================================================================== */
+html {
+  font-family: Cambria, Georgia, serif;
+  font-size: 93.75%;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+}
+
+body {
+  background-color: #FFF;
+  font-size: 1rem;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #0F57C2;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #0F57C2;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #E74600;
+  text-decoration: underline;
+}
+
+a:focus {
+  color: #E74600;
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4 {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+th, td {
+  text-align: left;
+}
+
+/* === Begin utility classes === */
+.last {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.unbold {
+  font-weight: normal;
+}
+
+.emphasis {
+  font-style: italic;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.grey-hr {
+  border-bottom: 1px solid #DBDCDE;
+  clear: both;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+}
+
+.hr-for-ie {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.hidden-form {
+  display: none;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.popup-icon {
+  margin: 0px 0px 0px 6px !important;
+  padding: 0px 0px 0px 0px !important;
+  float: none !important;
+}
+
+.sprite-inline {
+  display: inline-block !important;
+  padding-right: 7px;
+  vertical-align: middle;
+}
+
+/* Class to be used when sprite appears inline within an <li>, replacing the standard bullet, also makes sprite image visible within the <span> element */
+.sprite-inline-text {
+  display: inline-block !important;
+  vertical-align: middle;
+}
+
+/* Class to be used when sprite is needed within text element such as a <p>, also makes sprite image visible within the <span> element */
+.sprite-linkable {
+  cursor: pointer;
+}
+
+/* Can be applied to a span where the sprite is implemented or to an <a> tag that bounds a "sprited" span, without there will be no cursor change to a pointer */
+.comp-stacked {
+  padding-bottom: 0 !important;
+  border-bottom: none !important;
+}
+
+/* === End utility classes === */
+.legend {
+  font-size: .75em;
+  color: #666666;
+  margin-top: .9375em;
+}
+
+.attribution {
+  font-family: Helvetica, Arial, sans-serif;
+  color: #666666;
+  text-transform: uppercase;
+  font-size: 0.666666em;
+  line-height: 1.3;
+  font-weight: bold;
+}
+
+.color-positive {
+  color: #006600;
+}
+
+.color-negative {
+  color: #CC0000;
+}
+
+.background-positive {
+  background: #006600;
+}
+
+.background-negative {
+  background: #CC0000;
+}
+
+.fid-text--right {
+  text-align: right;
+}
+
+.fid-text--left {
+  text-align: left;
+}
+
+.fid-text--strong {
+  font-weight: bold;
+}
+
+.message {
+  background: #FFF;
+  border-style: solid;
+  border-width: 2px;
+  clear: both;
+  overflow: hidden;
+  padding: 10px 10px 15px 10px;
+  margin-bottom: 18px;
+}
+
+.message--icon {
+  display: block;
+  float: left;
+  margin-top: 3px;
+}
+
+.message--content {
+  margin-left: 25px;
+}
+
+.message--title, .message--content > p, .message--list {
+  font-size: 1em;
+  font-weight: normal;
+  line-height: 1.4;
+  padding-bottom: 8px;
+}
+
+.message--list {
+  padding-left: 20px;
+}
+
+.message--list > li {
+  padding-bottom: 8px;
+  list-style: square;
+}
+
+.message--error {
+  border-color: #cc0000;
+}
+
+.message--error p, .message--error .message--title {
+  color: #cc0000;
+}
+
+.message--warning {
+  border-color: #F0D202;
+}
+
+/* ==========================================================================
+   Accessibility Styles
+   ========================================================================== */
+.off-screen {
+  position: absolute;
+  left: -5000px;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.clearfix {
+  *zoom: 1;
+}
+
+.clearfix, x:-IE7 {
+  overflow: hidden;
+  width: 100%;
+}
+
+.header-navless {
+  background: #408800;
+  display: inline-block;
+  width: 100%;
+  min-height: 43.995px;
+  min-height: 2.933rem;
+  height: 43.995px;
+  height: 2.933rem;
+  display: table;
+}
+
+.header-navless--logo {
+  display: table-cell;
+  vertical-align: middle;
+  height: 26px;
+  width: 127px;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHdpZHRoPSIyMjIuMjAycHgiIGhlaWdodD0iNTJweCIgdmlld0JveD0iMCAwIDIyMi4yMDIgNTIiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDIyMi4yMDIgNTIiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8Zz4KCTxwb2x5Z29uIGZpbGw9IiNGRkZGRkYiIHBvaW50cz0iMzUuNiwxNi42IDIwLjgwMSwxNi42IDIyLjgwMSw5LjYgMzcuNiw5LjYgNDAuMjAzLDAgMTEuNDAxLDAgMCw0MC40IDE0LjIwMyw0MC40IDE4LjQwMSwyNS40IAoJCTMzLjIwMywyNS40IAkiLz4KCTxwb2x5Z29uIGZpbGw9IiNGRkZGRkYiIHBvaW50cz0iNTguMjAzLDAgNDQuMjAzLDAgNDIsOC4xOTkgNTUuODAxLDguMTk5IAkiLz4KCTxwb2x5Z29uIGZpbGw9IiNGRkZGRkYiIHBvaW50cz0iNDEuMjAzLDExIDMyLjgwMSw0MC40IDQ2LjgwMSw0MC40IDU1LjIwMywxMSAJIi8+Cgk8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNODAuNDAxLDBsLTQsMTQuMTk5Yy0xLjE5OC0yLjE5OS00LTMuNzk5LTgtMy43OTljLTQuNiwwLTguMzk5LDItMTAuNiw2Yy0zLDUuMTk5LTUsMTIuNzk5LTUsMTgKCQljMCw0LjYsMi43OTksNi43OTksNy40LDYuNzk5YzQuMzk3LDAsNy4xOTgtMS42LDEwLTRsLTEsMy4yMDFoMTMuNkw5NC4yMDIsMEg4MC40MDFMODAuNDAxLDB6IE03MiwzMC42CgkJYy0wLjYsMC40LTEuMTk5LDAuODAxLTIuNCwwLjgwMWMtMS4zOTcsMC0yLjE5OS0xLTIuMTk5LTIuMjAxYzAtMi4zOTgsMS00Ljc5OSwyLTcuMzk4YzAuODAyLTEuODAxLDItMi4yMDEsMy4xOTktMi4yMDEKCQljMC44MDEsMCwxLjgwMSwwLjQsMi4yMDEsMS4yMDFMNzIsMzAuNnoiLz4KCTxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0xMjIuNDAyLDI3LjZDMTIzLjIwNCwyNS4yLDEyNCwyMS4yLDEyNCwxOS40MDFjMC03LjQtNS41OTktOS4yMDEtMTQuMTk4LTkuMjAxCgkJYy01LjYsMC0xMS44MDEsMS44MDEtMTUuMjAxLDYuNGMtMywzLjgwMS01LjE5OSwxMS01LjE5OSwxNS40YzAsOCw2LjQsOS4xOTksMTQuODAyLDkuMTk5YzYuMTk3LDAsMTYtMi43OTksMTcuNzk2LTExLjE5OWgtMTMuNTk5CgkJYy0wLjgwMSwyLjgwMS0xLjYsMy42LTMuNiwzLjZzLTItMS42LTItMi4xOTljMC0xLjIsMC40LTIuMzk5LDAuNzk5LTMuODAxSDEyMi40MDJMMTIyLjQwMiwyNy42eiBNMTA4LjQwMSwxNy42CgkJYzEuNCwwLDIuNCwwLjQsMi40LDIuMjAxYzAsMC42LTAuMjAxLDEuMzk4LTAuNCwySDEwNC42QzEwNS42LDE4LjgwMSwxMDYuODAxLDE3LjYsMTA4LjQwMSwxNy42eiIvPgoJPHBvbHlnb24gZmlsbD0iI0ZGRkZGRiIgcG9pbnRzPSIxMzMuOCwwIDEyMi40MDIsNDAuNCAxMzYuNDAyLDQwLjQgMTQ3LjgsMCAJIi8+Cgk8cG9seWdvbiBmaWxsPSIjRkZGRkZGIiBwb2ludHM9IjE2Ni4yMDQsMCAxNTIuMjA0LDAgMTUwLDguMTk5IDE2My44LDguMTk5IAkiLz4KCTxwb2x5Z29uIGZpbGw9IiNGRkZGRkYiIHBvaW50cz0iMTQ5LjIwNCwxMSAxNDEsNDAuNCAxNTQuOCw0MC40IDE2My4yMDQsMTEgCSIvPgoJPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTIxMS4yMDQsMzQuNGMtMiwwLTMuODAyLDEuNzk5LTMuODAyLDMuNzk5UzIwOS4yMDQsNDIsMjExLjIwNCw0MlMyMTUsNDAuMTk5LDIxNSwzOC4xOTkKCQlTMjEzLjQwMiwzNC40LDIxMS4yMDQsMzQuNHogTTIxMS4yMDQsNDEuNGMtMS44MDIsMC0zLjIwMy0xLjQtMy4yMDMtMy4yMDFDMjA4LDM2LjQsMjA5LjQwMiwzNSwyMTEuMjA0LDM1CgkJYzEuNzk3LDAsMy4xOTgsMS40LDMuMTk4LDMuMTk5QzIxNC40MDIsNDAsMjEzLDQxLjQsMjExLjIwNCw0MS40eiIvPgoJPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTIxMi44LDM3LjRjMC0wLjgwMS0wLjM5OC0xLjIwMS0xLjM5OC0xLjIwMUgyMTB2NGgwLjYwMXYtMS42aDAuNjAzbDEsMS42SDIxM2wtMS0xLjYKCQlDMjEyLjQwMiwzOC40LDIxMi44LDM4LjE5OSwyMTIuOCwzNy40eiBNMjEwLjYwMSwzOHYtMWgwLjYwM2MwLjM5NywwLDEsMCwxLDAuNmMwLDAuNjAxLTAuNDAxLDAuNjAxLTEsMC42MDFMMjEwLjYwMSwzOAoJCUwyMTAuNjAxLDM4eiIvPgoJPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTIwNy44LDExbC03LjU5OCwxNi40bDAuMTk5LTE2LjRIMTg5aC0yLjU5OWgtNWwxLjgwMi02LjZoLTE0bC03LjYwMywyNi43OTkKCQlDMTYxLjIwNCwzMi44MDEsMTYxLDM0LDE2MSwzNS40YzAsMywxLjYwMiw1LDUuNjAyLDVIMTc5bDItNy4yMDFoLTIuNTk4Yy0xLjgwMSwwLTIuNDAyLTAuMzk4LTIuNDAyLTEuNzk5CgkJYzAtMC44MDEsMC4yMDMtMS44MDEsMC40MDItMi42MDFsMy4xOTktMTEuMkgxODdsMiwyMi44Yy0wLjM5OCwxLjgtMSwyLjYwMS0yLDMuMTk5Yy0xLjE5OSwwLjYwMS0zLjc5NywwLjQtNC43OTcsMC40SDE4MgoJCWwtMi4xOTksOGg5LjYwMmM1LjU5OSwwLDguMzk4LTIuODAxLDEyLjM5OC05bDIwLjQwMi0zMkgyMDcuOEwyMDcuOCwxMXoiLz4KPC9nPgo8L3N2Zz4K') 8px center no-repeat;
+  background-size: 119px 26px;
+}
+
+.header-navless--logo-print {
+  display: none;
+}
+
+.header-navless--additional-text {
+  text-align: right;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 7.995px 7.995px 7.995px 31.995px;
+  padding: 0.533rem 0.533rem 0.533rem 2.133rem;
+}
+
+.header-navless--title {
+  display: inline;
+  font-size: 18px;
+  font-size: 1.2rem;
+  line-height: 1.400;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #FFFFFF;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHdpZHRoPSIxMHB4IiBoZWlnaHQ9IjEycHgiIHZpZXdCb3g9IjEuNCAyLjIgMTAgMTIiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMS40IDIuMiAxMCAxMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0xMS4zLDcuMWgtMS4yVjUuNmMwLTAuOS0wLjMtMS44LTEtMi40Yy0wLjctMC42LTEuNy0xLTIuNy0xYy0xLjEsMC0yLDAuNC0yLjcsMWMtMC43LDAuNi0xLDEuNS0xLDIuNHYxLjYKCUgxLjRsMCw1LjdjMCwwLjcsMC42LDEuMywxLjQsMS4zSDEwYzAuOCwwLDEuNC0wLjYsMS40LTEuM0wxMS4zLDcuMXogTTUuMSw2YzAtMC40LDAtMC44LDAuMy0xYzAuMi0wLjMsMC42LTAuNCwxLTAuNAoJYzAuNSwwLDAuNywwLjEsMC45LDAuNGMwLjIsMC4zLDAuMywwLjYsMC4zLDF2MS4xSDUuMVY2eiIvPgo8L3N2Zz4K') 0 center no-repeat;
+  padding-left: 16.005px;
+  padding-left: 1.067rem;
+}
+
+.no-svg .header-navless--logo {
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHEAAAAbCAYAAABLEWDsAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA75JREFUeNrsWT1unUAQJi+vhxuYG7wt0puc4JEy3TvCi5Te+ACRyAnyfANygvCqtOs+BTlBoI9EwJqNVgRmvoU1ccFII8v2MDu78/ftbNC2bTDBRTuf4o4TQSZi1rY5FvQoUA/CJ2adimQUsPdgTd4F05QE8+ix46rjVJCpQX2cHT871oE/4mwuAXvM3lelPXNw4UydyGYLzwfrixCbEXvOjFwvk63lxLnUbzbu+ODJib6CAVknFBwUdXwLOvFmBZtZJ6Yz9TXWZt8ycmgJVMDBrlFKTfmX9lVSAN+sFHiTToyELHoHGJLSZpCDP5F8NNhoLhzsdaSvKtKnBofZUOBUpLuYmfEJ6eYCU0qAE+CXi9VblaAzd0VoKKqsme9PJNPr0YycFv6fWev1iLF0QM96sI8IRMAVI3P2gOoNJZZt3L76tYIxB1yYj0rAgSgE1ws3qsCgm6ILGLi141Wn9ejEWLDrKRD3jr0hZvqQFlCZDcEzoWQjvVdTqfnioQcuRaXmqpN6bnccij3/bSeOWcRRDqR/DpRblywqhWiWstSl/BeAPblDFcsF22NU187j1QKB4AU1dg5xfibw1AhrJcxaV/pZUfb7QMBLs3UIpuqZWdj8A44G0VEuyI7++xToLUhES/0nEno3QmaMlgkAKABHiK7jQW7dlKkO2RCH7AdXi9uZozIEXptMPbJwGb+zLe0/GsiwErDnCtgzNh7sdd8x/S6c2HvG3ROlUpoAJUA6EAWAFVRPuNCJaPn34WjXocSt0x0TvFpoT1eLDFxDgt9nADwhnHq8WtRCeVwKInPkFWPpjFJ6baiETDxQxJbgWG+KKisz2gmuPL1amOohzV2rBaNHc36ZNHbzMe9DgiCaWUZcylJGZf8sjLV8lMnCQriS3Tk58zKj9J+4VrYDDG3AqDmuMKgumMg2FNIA4MAAo5wOHglcxNFScIYEYtRIhkn0lWwoKQCiKScmCx2Qejh8FIwYfc2M7x8tgIaW/9Dji0QJlNlhAn3q+GPHb6hSZVNOPD5jKb0OrhANY/ADcLCB5QTUkb3cPTml9nR5t69cF9AWV6f3LeE1VcLfHX8fex3a0x/vF2aiZnSUAzlFxinLIeZ5SDHRqUd+j+mg1URfKkmumNCngcqB7KuybIkdwE0sBL8pn301+NHx+2DkPfPV01PGRmtTQnzHVA47oCPr92pz4v933jdA7oM1vRJpt53rqoSMCq8uDtwycX3SAf+OaqPnzYkvkPq+9ovpgRdrUBFsTny5TlTPMQz5I8AA6hybYT6sxwAAAAAASUVORK5CYII=') 8px center no-repeat;
+}
+
+.no-svg .header-navless--title {
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAMCAYAAABbayygAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAGxJREFUeNpiZEAC////TwBS9kAsAMQHgXgBIyPjBwY0Ref/YwKQmACyogAkyfdAfB+JX4CssAFJwgBkChJ/P0gNCwMaALrpAlQzA7rb9v8nDPYzMRAJBljhB2IUMoLCDUjXQ6MNGwAZ1AgQYABW0I3Ai0HOKAAAAABJRU5ErkJggg==') 0 center no-repeat;
+}
+
+.header-navless--title-text {
+  display: inline;
+}
+
+.header-navless--no-title .header-navless--title-text {
+  display: none;
+}
+
+.header-navless--no-lock .header-navless--title {
+  background-image: none;
+}
+
+@media (max-width: 480px) {
+  .header-navless--title-text {
+    font-size: 15px;
+    font-size: 1rem;
+    line-height: 1.2;
+  }
+}
+@media print {
+  .header-navless--additional-text {
+    width: 100%;
+  }
+
+  .header-navless--logo-print {
+    display: block;
+  }
+}
+/* topic-path component */
+.topic-path {
+  color: #666666;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 10.995px;
+  font-size: 0.733rem;
+  line-height: 1.25;
+  padding: 9px 0 10.005px 7.995px;
+  padding: 0.6rem 0 0.667rem 0.533rem;
+  margin-bottom: 10.005px;
+  margin-bottom: 0.667rem;
+  border-bottom: 1px solid #cccccc;
+}
+
+.topic-path--list {
+  margin: 0;
+  padding: 0;
+}
+
+.topic-path--item {
+  display: inline;
+  list-style-type: none;
+}
+
+.topic-path--item .topic-path--link:hover {
+  text-decoration: underline;
+}
+
+.topic-path--item .topic-path--link {
+  color: #666666;
+  text-decoration: none;
+  padding: 9px 0 10.005px 0;
+  padding: 0.6rem 0 0.667rem 0;
+  margin: 0;
+}
+
+.topic-path--item:first-child {
+  font-weight: bold;
+}
+
+.topic-path--item:after {
+  content: "\00BB";
+  margin: 0 3px 0 4.995px;
+  margin: 0 0.2rem 0 0.333rem;
+}
+
+@media (max-width: 980px) {
+  .topic-path {
+    display: none;
+  }
+}
+.footer-simple {
+  width: 100%;
+  background-color: #F0F0F0;
+  border-top: 1px solid #CCCCCC;
+  overflow: hidden;
+  position: relative;
+}
+
+.footer-simple--logo {
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHdpZHRoPSIxNTJweCIgaGVpZ2h0PSIzM3B4IiB2aWV3Qm94PSIwIDAgMTUyIDMzIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxNTIgMzMiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMTUuOCwzMS4zYzguNSwwLDE1LjMtNi45LDE1LjMtMTUuM2MwLTguNS02LjgtMTUuMy0xNS4zLTE1LjNDNy4zLDAuNywwLjUsNy42LDAuNSwxNgoJQzAuNSwyNC41LDcuMywzMS4zLDE1LjgsMzEuMyIvPgo8cGF0aCBmaWxsPSIjMjMxRjIwIiBkPSJNMTMuNCwxOC42SDE5bDEuNiwxLjFoLTcuNUw5LjgsMzAuMWMtMy43LTEuNC03LjItNC44LTguNi04LjZjLTEuNS0zLjctMS41LTguMiwwLTExLjkKCUMyLjcsNS44LDYuMiwyLjQsMTAsMWMzLTEuMiw3LTEuNCwxMC4xLTAuNGMzLjYsMSw3LDMuNiw5LDdjMi4yLDMuNywyLjgsOC40LDEuNSwxMi43Yy0wLjksMi44LTIuNiw1LjUtNSw3LjRsLTQuMi02LjlsNS44LDMuMgoJYzAsMCwwLDAsMC0wLjFsLTcuNi02LjVsOS44LDEuNWMwLDAsMCwwLDAsMGwtMC4xLDBsLTkuMi0zLjJsOS42LTIuM2MwLDAsMCwwLDAsMEwyMCwxMy45bDcuNy01LjhjMCwwLTAuMSwwLTAuMSwwTDE5LDEyLjVMMjMuOCw0CgljMCwwLDAsMCwwLDBsLTYuMyw3LjNsMS4yLTkuNmMwLDAsMCwwLTAuMSwwTDE1LjcsMTFsLTIuNS05LjZjMCwwLTAuMSwwLTAuMSwwbDAuNywxMEw3LjksMy43YzAsMCwwLDAtMC4xLDBsNC41LDguNkwzLjksNy42CgljMCwwLDAsMCwwLDBsNy41LDYuMmwtOS42LTFjMCwwLDAsMCwwLDAuMWw5LjMsMi43bC05LjMsMi43YzAsMCwwLDAsMCwwLjFsOS42LTEuMWwtNy41LDYuNGMwLDAsMCwwLDAsMGwwLjEsMGw2LTMuMmwxLjQtMi4zSDEzCglsLTEuMS0wLjhsMy43LTZMMTMuNCwxOC42TDEzLjQsMTguNiIvPgo8Zz4KCTxnPgoJCTxwYXRoIGZpbGw9IiMyMzFGMjAiIGQ9Ik00MS4yLDI2LjVoLTcuNWw2LTIxLjVoMTUuNGwtMS41LDUuMWgtNy45bC0xLDMuN2g3LjlsLTEuMyw0LjdoLTcuOUw0MS4yLDI2LjV6Ii8+CgkJPHBhdGggZmlsbD0iIzIzMUYyMCIgZD0iTTU4LjYsMjYuNWgtNy40bDQuNC0xNS43SDYzTDU4LjYsMjYuNXogTTYzLjQsOS4zSDU2TDU3LjIsNWg3LjRMNjMuNCw5LjN6Ii8+Cgk8L2c+Cgk8cGF0aCBmaWxsPSIjMjMxRjIwIiBkPSJNNzcuOSwyNi41aC03LjNsMC41LTEuOGMtMS41LDEuMi0zLDIuMS01LjQsMi4xYy0yLjQsMC0zLjktMS4yLTMuOS0zLjZjMC0yLjcsMS4xLTYuNywyLjctOS42CgkJYzEuMi0yLjEsMy4yLTMuMiw1LjctMy4yYzIuMSwwLDMuNywwLjksNC4zLDIuMUw3Ni41LDVoNy40TDc3LjksMjYuNXogTTcyLjMsMTUuNGMtMC43LDAtMS4zLDAuMi0xLjcsMS4xYy0wLjUsMS4zLTEsMi42LTEsMy45CgkJYzAsMC42LDAuNCwxLjEsMS4yLDEuMWMwLjYsMCwxLTAuMiwxLjMtMC40bDEuNS01LjJDNzMuMiwxNS43LDcyLjgsMTUuNCw3Mi4zLDE1LjR6Ii8+Cgk8cGF0aCBmaWxsPSIjMjMxRjIwIiBkPSJNOTguOSwxOS42SDg4LjZjLTAuMiwwLjgtMC40LDEuNC0wLjQsMi4xYzAsMC4zLDAuMSwxLjEsMS4xLDEuMXMxLjUtMC40LDEuOS0xLjloNy4zYy0wLjksNC41LTYuMiw2LTkuNSw2CgkJYy00LjQsMC03LjgtMC42LTcuOC00LjljMC0yLjMsMS4yLTYuMiwyLjctOC4yYzEuOS0yLjUsNS4xLTMuNCw4LjEtMy40YzQuNiwwLDcuNiwxLDcuNiw0LjlDOTkuNywxNi4yLDk5LjMsMTguMyw5OC45LDE5LjZ6CgkJIE05MS41LDE0LjNjLTAuOSwwLTEuNiwwLjYtMiwyLjJoMy4xYzAuMS0wLjMsMC4yLTAuOCwwLjItMS4xQzkyLjgsMTQuNiw5Mi4yLDE0LjMsOTEuNSwxNC4zeiIvPgoJPHBhdGggZmlsbD0iIzIzMUYyMCIgZD0iTTEwNi40LDI2LjVoLTcuNGw2LTIxLjVoNy40TDEwNi40LDI2LjV6Ii8+Cgk8Zz4KCQk8cGF0aCBmaWxsPSIjMjMxRjIwIiBkPSJNMTE2LjIsMjYuNWgtNy40bDQuNC0xNS43aDcuNEwxMTYuMiwyNi41eiBNMTIxLDkuM2gtNy40bDEuMi00LjNoNy40TDEyMSw5LjN6Ii8+CgkJPHBhdGggZmlsbD0iIzIzMUYyMCIgZD0iTTEzNC40LDEwLjhsMC42LDMuNWgtNS43bC0xLjcsNmMtMC4xLDAuNS0wLjMsMS0wLjMsMS40YzAsMC43LDAuMywwLjksMS4zLDAuOWgxLjZsLTEuMSwzLjloLTYuNgoJCQljLTIuMiwwLTMtMS4xLTMtMi43YzAtMC43LDAuMS0xLjQsMC4zLTIuMmw0LTE0LjNoNy40bC0xLDMuNUgxMzQuNHoiLz4KCTwvZz4KPC9nPgo8Zz4KCTxnPgoJCTxwYXRoIGZpbGw9IiMyMzFGMjAiIGQ9Ik0zMy41LDI4LjlsMS45LDBsLTEuMiwzLjlsLTEuOCwwTDMzLjUsMjguOXoiLz4KCQk8cGF0aCBmaWxsPSIjMjMxRjIwIiBkPSJNNDAsMjguOWwyLjcsMGwwLjcsMi42aDBsMC44LTIuNmwxLjYsMGwtMS4yLDMuOWwtMi42LDBMNDEuMywzMGgwbC0wLjgsMi44bC0xLjYsMEw0MCwyOC45eiIvPgoJCTxwYXRoIGZpbGw9IiMyMzFGMjAiIGQ9Ik00OS4zLDI4LjlsMiwwbDAuNCwyLjRsMS45LTIuNGwxLjksMGwtMy4xLDMuOWwtMi4zLDBMNDkuMywyOC45eiIvPgoJCTxwYXRoIGZpbGw9IiMyMzFGMjAiIGQ9Ik01OSwyOC45bDQuMiwwTDYzLDI5LjdsLTIuNCwwbC0wLjIsMC44bDIuMywwbC0wLjIsMC43bC0yLjMsMEw1OS45LDMybDIuNCwwbC0wLjIsMC44bC00LjIsMEw1OSwyOC45eiIvPgoJCTxwYXRoIGZpbGw9IiMyMzFGMjAiIGQ9Ik03Ny4xLDI5LjhsLTEuNCwwbDAuMy0wLjlsNC43LDBsLTAuMywwLjlsLTEuNCwwbC0wLjksMi45bC0xLjksMEw3Ny4xLDI5Ljh6Ii8+CgkJPHBhdGggZmlsbD0iIzIzMUYyMCIgZD0iTTg0LjYsMjguOWwyLjgsMGwwLjEsMi42aDBsMS43LTIuNmwyLjgsMGwtMS4yLDMuOWwtMS43LDBsMC45LTIuOWgwbC0yLjEsMi45bC0xLjgsMGwtMC4zLTIuOWgwTDg1LDMyLjcKCQkJaC0xLjZMODQuNiwyOC45eiIvPgoJCTxwYXRoIGZpbGw9IiMyMzFGMjAiIGQ9Ik0xMDMuOCwyOC45bDIuNywwbDAuNywyLjZoMGwwLjgtMi42aDEuNmwtMS4yLDMuOWwtMi42LDBsLTAuNy0yLjhoMGwtMC44LDIuOGwtMS42LDBMMTAzLjgsMjguOXoiLz4KCQk8cGF0aCBmaWxsPSIjMjMxRjIwIiBkPSJNMTE0LjEsMjkuOGwtMS40LDBsMC4zLTAuOWw0LjcsMGwtMC4zLDAuOWwtMS40LDBsLTAuOSwyLjlsLTEuOSwwTDExNC4xLDI5Ljh6Ii8+Cgk8L2c+CjwvZz4KPGc+Cgk8cGF0aCBmaWxsPSJub25lIiBkPSJNMTQ2LjgsMjQuOGMwLTAuMy0wLjMtMC4zLTAuNS0wLjNoLTAuM3YwLjZoMC4zQzE0Ni41LDI1LjIsMTQ2LjgsMjUuMSwxNDYuOCwyNC44eiIvPgoJPHBhdGggZmlsbD0ibm9uZSIgZD0iTTE0Ni4zLDIzLjdjLTAuOSwwLTEuNywwLjctMS43LDEuN3MwLjcsMS43LDEuNywxLjdjMC45LDAsMS43LTAuNywxLjctMS43UzE0Ny4yLDIzLjcsMTQ2LjMsMjMuN3oKCQkgTTE0Ni44LDI2LjVsLTAuNi0wLjloLTAuM3YwLjloLTAuNHYtMi4zaDAuOWMwLjYsMCwwLjgsMC4yLDAuOCwwLjdjMCwwLjQtMC4yLDAuNi0wLjYsMC42bDAuNiwxSDE0Ni44eiIvPgoJPHBhdGggZmlsbD0iIzIzMUYyMCIgZD0iTTE0Ni4zLDIzLjNjLTEuMSwwLTIsMC45LTIsMmMwLDEuMSwwLjksMiwyLDJjMS4xLDAsMi0wLjksMi0yQzE0OC4zLDI0LjIsMTQ3LjQsMjMuMywxNDYuMywyMy4zegoJCSBNMTQ2LjMsMjdjLTAuOSwwLTEuNy0wLjctMS43LTEuN3MwLjctMS43LDEuNy0xLjdjMC45LDAsMS43LDAuNywxLjcsMS43UzE0Ny4yLDI3LDE0Ni4zLDI3eiIvPgoJPHBhdGggZmlsbD0iIzIzMUYyMCIgZD0iTTE0Ny4xLDI0LjljMC0wLjQtMC4yLTAuNi0wLjctMC42aC0wLjh2Mi4xaDAuNHYtMC45aDAuM2wwLjUsMC45aDAuNGwtMC41LTAuOQoJCUMxNDYuOCwyNS40LDE0Ny4xLDI1LjMsMTQ3LjEsMjQuOXogTTE0NS45LDI1LjJ2LTAuNmgwLjNjMC4yLDAsMC41LDAsMC41LDAuM3MtMC4zLDAuMy0wLjUsMC4zSDE0NS45eiIvPgo8L2c+CjxwYXRoIGQ9Ik02OC45LDMwYzAsMCwwLTAuMSwwLTAuMmMwLjEtMC4yLDAuMy0wLjMsMC43LTAuM2MwLjIsMCwwLjYsMCwwLjcsMC4xYzAuMSwwLjEsMC4xLDAuMiwwLjEsMC4zSDcyYzAuMi0wLjctMC4yLTEuMS0yLjEtMS4xCgljLTEuOCwwLTIuOCwwLjQtMywxLjJjLTAuMSwwLjItMC4xLDAuNSwwLjEsMC43YzAuNSwwLjUsMi41LDAuNiwyLjcsMC45YzAsMCwwLDAuMSwwLDAuMmMtMC4xLDAuMy0wLjUsMC40LTAuOSwwLjQKCWMtMC4yLDAtMC42LTAuMS0wLjctMC4yYy0wLjEtMC4xLTAuMS0wLjMsMC0wLjRsLTEuNywwYy0wLjIsMC42LTAuMiwxLjIsMi4xLDEuMmMyLDAsMi45LTAuNSwzLjItMS4zYzAuMS0wLjQsMC0wLjYtMC4xLTAuNwoJQzcxLjEsMzAuNSw2OS4xLDMwLjMsNjguOSwzMHoiLz4KPHBhdGggZD0iTTk1LjgsMjguOWw0LjIsMGwtMC4yLDAuOGwtMi40LDBsLTAuMiwwLjhsMi4zLDBsLTAuMiwwLjdsLTIuMywwTDk2LjYsMzJsMi40LDBsLTAuMiwwLjhsLTQuMiwwTDk1LjgsMjguOXoiLz4KPHBhdGggZmlsbD0iIzIzMUYyMCIgZD0iTTE0NC40LDEwLjhsLTQsOC43bDAuMS04LjdIMTMzbDEuNCwxNS43Yy0wLjIsMC45LTAuNSwxLjQtMS4xLDEuN2MtMC42LDAuMy0yLjEsMC4yLTIuNiwwLjJsLTAuMSwwCglsLTEuMiw0LjNsNS4xLDBjMywwLDQuNS0xLjUsNi42LTQuOGwxMC44LTE3SDE0NC40eiIvPgo8cGF0aCBkPSJNMTIyLjQsMzBjMCwwLDAtMC4xLDAtMC4yYzAuMS0wLjIsMC4zLTAuMywwLjctMC4zYzAuMiwwLDAuNiwwLDAuNywwLjFjMC4xLDAuMSwwLjEsMC4yLDAuMSwwLjNoMS42CgljMC4yLTAuNy0wLjItMS4xLTIuMS0xLjFjLTEuOCwwLTIuOCwwLjQtMywxLjJjLTAuMSwwLjItMC4xLDAuNSwwLjEsMC43YzAuNSwwLjUsMi41LDAuNiwyLjcsMC45YzAsMCwwLDAuMSwwLDAuMgoJYy0wLjEsMC4zLTAuNSwwLjQtMC45LDAuNGMtMC4yLDAtMC42LTAuMS0wLjctMC4yYy0wLjEtMC4xLTAuMS0wLjMsMC0wLjRsLTEuNywwYy0wLjIsMC42LTAuMiwxLjIsMi4xLDEuMmMyLDAsMi45LTAuNSwzLjItMS4zCgljMC4xLTAuNCwwLTAuNi0wLjEtMC43QzEyNC42LDMwLjQsMTIyLjcsMzAuMywxMjIuNCwzMHoiLz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==') left top no-repeat;
+  height: 33px;
+  width: 152px;
+  float: left;
+  margin: 15px 0 0 16.005px;
+  margin: 1rem 0 0 1.067rem;
+  position: absolute;
+}
+
+.no-svg .footer-simple--logo {
+  background: url('data:image/png;base64,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') left top no-repeat;
+}
+
+.footer-simple--logo-print {
+  display: none;
+}
+
+.footer-simple--text-section {
+  float: right;
+  margin: 15px 16.005px;
+  margin: 1rem 1.067rem;
+  position: relative;
+}
+
+.footer-simple--text {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-size: 0.8rem;
+  line-height: 1.7;
+  color: #666;
+  text-align: right;
+}
+
+.footer-simple--list {
+  margin: 0;
+  white-space: nowrap;
+}
+
+.footer-simple--list-item {
+  display: inline;
+  font-size: 12.495px;
+  font-size: 0.833rem;
+}
+
+.footer-simple--list-item:before {
+  color: #989898;
+  margin: 0 7.005px;
+  margin: 0 0.467rem;
+  content: '|';
+}
+
+.footer-simple--list-item:first-child:before {
+  content: '';
+  margin: 0;
+}
+
+.footer-simple--link {
+  padding: 7.995px 0;
+  padding: 0.533rem 0;
+  white-space: nowrap;
+}
+
+.footer-simple--disclaimer {
+  line-height: 2;
+}
+
+.footer-simple--member-text {
+  display: none;
+  line-height: 2;
+  color: #000;
+}
+
+@media (max-width: 490px) {
+  .footer-simple--logo {
+    float: none;
+    position: relative;
+    margin-left: 7.995px;
+    margin-left: 0.533rem;
+  }
+
+  .footer-simple--text-section {
+    float: none;
+    margin-left: 7.995px;
+    margin-left: 0.533rem;
+    margin-top: 19.5px;
+    margin-top: 1.3rem;
+  }
+
+  .footer-simple--text {
+    text-align: left;
+  }
+
+  .footer-simple--list {
+    padding: 0;
+  }
+}
+@media print {
+  .footer-simple--logo-print {
+    display: block;
+  }
+
+  .footer-simple--member-text {
+    display: block;
+  }
+}
+.h1 {
+  margin: 0;
+  border: none;
+  padding: 0 0 13.005px 0;
+  padding: 0 0 0.867rem 0;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 33px;
+  font-size: 2.2rem;
+  line-height: 1.09;
+  font-weight: normal;
+  color: #000;
+}
+
+.responsive-dense .h1 {
+  font-size: 27px;
+  font-size: 1.8rem;
+  line-height: 1.2;
+}
+
+@media (max-width: 490px) {
+  .h1 {
+    font-size: 27px;
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+}
+.h2 {
+  border: none;
+  padding: 0 0 13.005px 0;
+  padding: 0 0 0.867rem 0;
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  font-size: 1.6rem;
+  line-height: 1.125;
+  font-weight: bold;
+  color: #000;
+}
+
+.h2--bottom-rule {
+  border-bottom: 1px solid #dbdbdb;
+  margin-bottom: 15px;
+  margin-bottom: 1rem;
+}
+
+.h2--secondary {
+  color: #408800;
+}
+
+.responsive-dense .h2 {
+  font-size: 21px;
+  font-size: 1.4rem;
+  line-height: 1.143;
+}
+
+@media (max-width: 490px) {
+  .h2 {
+    font-size: 21px;
+    font-size: 1.4rem;
+    line-height: 1.143;
+  }
+}
+.h3 {
+  margin: 0;
+  border: none;
+  padding: 0 0 15px 0;
+  padding: 0 0 1rem 0;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-size: 1.2rem;
+  line-height: 1.167em;
+  font-weight: bold;
+  color: #000;
+}
+
+/* Mixins */
+.paragraph {
+  margin: 0;
+  border: none;
+  padding: 0;
+  font-family: Cambria, Georgia, serif;
+  color: #000;
+}
+
+/* paragraph component */
+.paragraph--lede {
+  font-size: 18px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #000;
+}
+
+.paragraph--standard {
+  font-size: 15px;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #000;
+}
+
+.paragraph--attribution {
+  font-size: 10.005px;
+  font-size: 0.667rem;
+  line-height: 1.3;
+  color: #666;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.paragraph--footnotes {
+  font-size: 12px;
+  font-size: 0.8rem;
+  line-height: 1.25;
+  color: #666;
+}
+
+.paragraph--tags {
+  font-size: 10.995px;
+  font-size: 0.733rem;
+  line-height: 1.273;
+  color: #666;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.paragraph--as-of-date {
+  font-size: 10.005px;
+  font-size: 0.667rem;
+  line-height: 0.867;
+  color: #666;
+  font-family: Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+.responsive-dense .paragraph--lede {
+  font-size: 16.995px;
+  font-size: 1.133rem;
+  line-height: 1.533;
+  color: #000;
+}
+
+@media (max-width: 490px) {
+  .paragraph--lede {
+    font-size: 16.995px;
+    font-size: 1.133rem;
+    line-height: 1.533;
+    color: #000;
+  }
+}
+/* unordered list component */
+.list-unordered {
+  font-family: Cambria, Georgia, serif;
+  padding: 0;
+  margin: 0 0 18px 7.5px;
+  margin: 0 0 1.2rem 0.5rem;
+  list-style: none;
+  font-size: 15px;
+  font-size: 1rem;
+  line-height: 1.4;
+  float: left;
+}
+
+.list-unordered--item {
+  padding-left: 9px;
+  padding-left: 0.6rem;
+  padding-bottom: 9px;
+  padding-bottom: 0.6rem;
+}
+.list-unordered--item:before {
+  content: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHdpZHRoPSI0cHgiIGhlaWdodD0iNHB4IiB2aWV3Qm94PSIwIDAgNCA0IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA0IDQiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8cmVjdCBmaWxsPSIjOTlDQTNDIiB3aWR0aD0iNCIgaGVpZ2h0PSI0Ii8+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=');
+  display: block;
+  max-height: 0;
+  max-width: 0;
+  position: relative;
+  left: -16.5px;
+  left: -1.1rem;
+  top: -3px;
+  top: -0.2rem;
+}
+
+.no-svg .list-unordered--item:before {
+  content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABdJREFUeNpinHnKhgEGmBiQAG4OQIABAFJvAafNW0nNAAAAAElFTkSuQmCC');
+}
+
+.list-unordered--link {
+  padding: 7.005px 0;
+  padding: 0.467rem 0;
+}
+
+.list-unordered--nested {
+  margin-left: 16.005px;
+  margin-left: 1.067rem;
+}
+
+.list-unordered--item-nested {
+  padding-left: 40.5px;
+  padding-left: 2.7rem;
+}
+.list-unordered--item-nested:before {
+  content: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHdpZHRoPSIxOHB4IiBoZWlnaHQ9IjJweCIgdmlld0JveD0iMCAwIDE4IDIiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDE4IDIiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8cmVjdCB3aWR0aD0iMTgiIGhlaWdodD0iMiIvPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K');
+  left: -25.5px;
+  left: -1.7rem;
+  top: -3px;
+  top: -0.2rem;
+}
+
+.no-svg .list-unordered--item-nested:before {
+  content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAADCAYAAABxhjRXAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACNJREFUeNpiZGBgcIBiSsEBFqhB9VQwjAFk2AEG6oADAAEGAI+nA4m9tpyUAAAAAElFTkSuQmCC');
+}
+
+.list-unordered--no-bullet {
+  list-style-type: none;
+  margin-left: 0;
+}
+.list-unordered--no-bullet .list-unordered--nested {
+  margin-left: 0;
+}
+.list-unordered--no-bullet .list-unordered--item {
+  font-weight: bold;
+  padding-left: 0;
+}
+.list-unordered--no-bullet .list-unordered--item:before {
+  display: none;
+}
+
+
+body > .fidgrid:first-child {
+  background-color: #FFF;
+}
+
+@media only screen and (min-width: 600px) {
+  div[role="main"] {
+    min-height: 463px;
+  }
+}

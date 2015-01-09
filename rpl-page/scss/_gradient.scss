@@ -1,0 +1,23 @@
+@mixin background-linear-gradient($from-color, $to-color, $to-stop: false, $fallback-color: $to-color) {
+    background-color: $fallback-color;
+    @if $to-stop {
+        background-image: -webkit-gradient(linear, 50% 0%, 50% $to-stop * 1%, color-stop(0%, $from-color), color-stop(100%, $to-color));
+        background-image: -webkit-linear-gradient(top, $from-color, $to-color $to-stop * 1%);
+        background-image:    -moz-linear-gradient(top, $from-color, $to-color $to-stop * 1%);
+        background-image:     -ms-linear-gradient(top, $from-color, $to-color $to-stop * 1%);
+        background-image:      -o-linear-gradient(top, $from-color, $to-color $to-stop * 1%);
+        background-image:         linear-gradient(top, $from-color, $to-color $to-stop * 1%);
+        filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#{$from-color}, endColorstr=#{$to-color});
+        -ms-filter: "progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#{$from-color}, endColorstr=#{$to-color})";
+    }
+    @else {
+        background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, $from-color), color-stop(100%, $to-color));
+        background-image: -webkit-linear-gradient(top, $from-color, $to-color);
+        background-image:    -moz-linear-gradient(top, $from-color, $to-color);
+        background-image:     -ms-linear-gradient(top, $from-color, $to-color);
+        background-image:      -o-linear-gradient(top, $from-color, $to-color);
+        background-image:         linear-gradient(top, $from-color, $to-color);
+        filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#{$from-color}, endColorstr=#{$to-color});
+        -ms-filter: "progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#{$from-color}, endColorstr=#{$to-color})";
+    }
+}

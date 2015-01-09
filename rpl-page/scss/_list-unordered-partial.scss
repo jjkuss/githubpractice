@@ -1,0 +1,78 @@
+$list-unordered-bullet: "../images/list-green-bullet.svg";
+$list-unordered-bullet-png: "../images/list-green-bullet.png";
+$list-unordered-nested: "../images/list-unordered-dash.svg";
+$list-unordered-nested-png: "../images/list-unordered-dash.png";
+
+/* unordered list component */
+
+.list-unordered {
+    font-family: $serif-font;
+    padding: 0;
+    @include rem(margin, 0 0 1.2 0.5); // 18px 7px
+    list-style: none;
+    @include rem(font-size, 1); //15px
+    line-height: 1.4; //21px
+    float: left;
+}
+
+.list-unordered--item {
+    @include rem(padding-left, 0.6); //9px
+    @include rem(padding-bottom, 0.6); //9px
+
+    &:before {
+        content: inline-image($list-unordered-bullet);
+        display: block;
+        max-height: 0;
+        max-width: 0;
+        position: relative;
+        @include rem(left, -1.1); //-16px
+        @include rem(top, -0.2); //-3px
+    }
+}
+
+.no-svg .list-unordered--item{
+    &:before {
+        content: inline-image($list-unordered-bullet-png);
+    }
+}
+
+.list-unordered--link {
+    @include rem(padding, 0.467 0) //7px
+}
+
+.list-unordered--nested {
+    @include rem(margin-left, 1.067); //16px
+}
+
+.list-unordered--item-nested {
+    @include rem(padding-left, 2.7); //34px
+    &:before {
+        content: inline-image($list-unordered-nested);
+        @include rem(left, -1.7); //-25px
+        @include rem(top, -0.2); //-3px
+    }
+}
+
+.no-svg .list-unordered--item-nested {
+    &:before {
+        content: inline-image($list-unordered-nested-png);
+    }
+}
+
+.list-unordered--no-bullet{
+    list-style-type: none;
+    margin-left: 0;
+
+    .list-unordered--nested {
+        margin-left: 0;
+    }
+
+    .list-unordered--item {
+        font-weight: bold;
+        padding-left: 0;
+
+        &:before{
+            display:none;
+        }
+    }
+}

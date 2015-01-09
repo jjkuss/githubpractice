@@ -1,0 +1,223 @@
+$serif-font: Cambria, Georgia, serif;
+$sans-font: Helvetica, Arial, sans-serif;
+$base-font-size: 1em;
+$body-background-color: #FFF;
+$rule-color: #DBDBDB;
+$link-color: #0F57C2;
+$link-visited-color: #800080;
+$link-hover-color: #E74600;
+$link-active-color: #E74600;
+$link-focus-color: #E74600;
+$link-hover-color-on-dark-bkg: #FE8C00;
+$link-active-color: $link-hover-color;
+$link-active-color-on-dark-bkg: $link-hover-color-on-dark-bkg;
+@mixin standard-link-treatment() {
+    color: $link-color;
+    text-decoration: none;
+};
+@mixin hover-link-treatment() {
+    color: $link-color;
+    text-decoration: underline;
+};
+@mixin active-link-treatment() {
+    color: $link-active-color;
+    text-decoration: underline;
+};
+@mixin focus-link-treatment() {
+    color: $link-focus-color;
+    text-decoration: underline;
+};
+
+$heading-text-color: #0F57C2;
+$attribution-color: #666666;
+@mixin vertical-rule() {
+    border-right-width: 1px;
+    border-right-color: #DBDBDB;
+    border-right-style: dotted;
+};
+
+//change indicators
+$up-color: #006600;
+$down-color: #CC0000;
+
+// messages
+$confirmation-color: #83B51F;
+$error-color: #CC0000;
+$note-color: #6289A9;
+$warning-color: #F0D202;
+
+// charts
+$chart-color-1: #1962C8;
+$chart-color-2: #79B3FD;
+$chart-color-3: #3F8700;
+$chart-color-4: #D3CB4F;
+$chart-color-5: #EB793E;
+$chart-color-6: #9D61CC;
+$chart-color-7: #B50000;
+$chart-color-8: #B57541;
+$chart-color-9: #53B000;
+$chart-color-10: #22767C;
+$chart-color-11: #083863;
+$chart-color-12: #00A965;
+
+// buttons
+$button-gradient-start-color: #fdfdfd;
+$button-gradient-end-color: #e6e6e6;
+$button-selected-gradient-start-color: #f1f1f1;
+$button-selected-gradient-end-color: #fefefe;
+$button-text-color: #2969c7;
+$button-selected-text-color: black;
+$control-border-color: #d2d2d2;
+
+// tables and datagrids
+$table-th-text-color: #000000;
+$table-th-border-top-bottom: 1px dotted #DBDBDB;
+$table-th-border-left-right: 1px solid #DBDBDB;
+$table-th-sort-border: 2px solid #000000;
+$table-body-text-color: #000000;
+$table-td-border-top-bottom: 1px dotted #DBDBDB;
+$table-td-border-left-right: 1px solid #DBDBDB;
+$table-row-hover-color: #F0F0F0;
+
+// fidgrid min-width
+$fidgrid-min-width: 1140px;
+
+$baseFontSizePX: 15 !default;
+
+.nopad  {
+    padding: 0 !important;
+}
+
+.nodisplay {
+    display: none !important;
+}
+
+.noborder {
+    border: none !important;
+}
+
+//return rems with pixel fallbacks
+//this mixin has a dependency on $baseFontSizePX
+
+@function parseInt($n) {
+    @return $n / ($n * 0 + 1);
+}
+
+@mixin rem($property, $values) {
+    $px : ();
+    $rem: ();
+
+    @each $value in $values {
+
+        @if $value == 0 or $value == auto {
+            $px : append($px , $value);
+            $rem: append($rem, $value);
+        }
+
+        @else {
+            $unit: "rem" !default;
+
+            $val: parseInt($value);
+
+            @if $unit == "rem" {
+                $px : append($px,  ($val * $baseFontSizePX + px));
+                $rem: append($rem, $val + rem);
+            }
+        }
+    }
+
+    @if $px == $rem {
+        #{$property}: $px;
+    } @else {
+        #{$property}: $px;
+        #{$property}: $rem;
+    }
+}
+
+$breakpointSmall: 490px !default;
+$baseFontSizePX: 15 !default;
+$gutterPadding: 0.533 !default;
+
+
+/* === Begin utility classes === */
+
+.last {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.unbold {
+    font-weight: normal;
+}
+
+.emphasis {
+    font-style: italic;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.grey-hr {
+    border-bottom: 1px solid #DBDCDE;
+    clear: both;
+    height: 1px;
+    margin: 0;
+    padding: 0;
+}
+
+.hr-for-ie {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.hidden-form {
+    display: none;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.popup-icon {
+    margin: 0px 0px 0px 6px !important;
+    padding: 0px 0px 0px 0px !important;
+    float: none !important;
+}
+
+.sprite-inline {
+    display: inline-block !important;
+    padding-right: 7px;
+    vertical-align: middle;
+}
+/* Class to be used when sprite appears inline within an <li>, replacing the standard bullet, also makes sprite image visible within the <span> element */
+.sprite-inline-text {
+    display: inline-block !important;
+    vertical-align: middle;
+}
+/* Class to be used when sprite is needed within text element such as a <p>, also makes sprite image visible within the <span> element */
+.sprite-linkable {
+    cursor: pointer;
+}
+/* Can be applied to a span where the sprite is implemented or to an <a> tag that bounds a "sprited" span, without there will be no cursor change to a pointer */
+.comp-stacked {
+    padding-bottom: 0 !important;
+    border-bottom: none !important;
+}
+
+/* === End utility classes === */

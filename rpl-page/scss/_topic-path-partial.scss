@@ -1,0 +1,52 @@
+/* topic-path component */
+
+$sans-font: Helvetica, Arial, sans-serif !default;
+$breakpointLarge: 980px;
+$baseFontSizePX: 15 !default;
+$gutterPadding: 0.533 !default;
+
+.topic-path {
+    color: #666666;
+    font-family: $sans-font;
+    @include rem(font-size, 0.733); //10px
+    line-height: 1.25;
+    @include rem(padding, 0.6 0 0.667 $gutterPadding); //9px 10px 8px
+    @include rem(margin-bottom, 0.667);
+    border-bottom: 1px solid #cccccc;
+}
+.topic-path--list{
+    margin: 0;
+    padding: 0;
+}
+
+.topic-path--item {
+    display: inline;
+    list-style-type: none;
+}
+
+.topic-path--item .topic-path--link:hover {
+    text-decoration: underline;
+}
+
+.topic-path--item .topic-path--link {
+    color: #666666;
+    text-decoration: none;
+    //padding for larger touch area
+    @include rem(padding, 0.6 0 0.667 0); //9px 10px
+    margin: 0;
+}
+
+.topic-path--item:first-child {
+    font-weight: bold;
+}
+
+.topic-path--item:after {
+    content: "\00BB";
+    @include rem(margin, 0 0.200 0 0.333); //3px 4px
+}
+
+@media (max-width: $breakpointLarge)  {
+    .topic-path{
+        display: none;
+    }
+}

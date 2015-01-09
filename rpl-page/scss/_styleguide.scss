@@ -1,0 +1,223 @@
+$serif-font: Cambria, Georgia, serif;
+$sans-font: Helvetica, Arial, sans-serif;
+$base-font-size: 1em;
+$body-background-color: #FFF;
+$rule-color: #DBDBDB;
+$link-color: #0F57C2;
+$link-visited-color: #800080;
+$link-hover-color: #E74600;
+$link-active-color: #E74600;
+$link-focus-color: #E74600;
+$link-hover-color-on-dark-bkg: #FE8C00;
+$link-active-color: $link-hover-color;
+$link-active-color-on-dark-bkg: $link-hover-color-on-dark-bkg;
+@mixin standard-link-treatment() {
+    color: $link-color;
+    text-decoration: none;
+};
+@mixin hover-link-treatment() {
+    color: $link-color;
+    text-decoration: underline;
+};
+@mixin active-link-treatment() {
+    color: $link-active-color;
+    text-decoration: underline;
+};
+@mixin focus-link-treatment() {
+    color: $link-focus-color;
+    text-decoration: underline;
+};
+
+$heading-text-color: #0F57C2;
+$attribution-color: #666666;
+@mixin vertical-rule() {
+    border-right-width: 1px;
+    border-right-color: #DBDBDB;
+    border-right-style: dotted;
+};
+
+//change indicators
+$up-color: #006600;
+$down-color: #CC0000;
+
+// messages
+$confirmation-color: #83B51F;
+$error-color: #CC0000;
+$note-color: #6289A9;
+$warning-color: #F0D202;
+
+// charts
+$chart-color-1: #1962C8;
+$chart-color-2: #79B3FD;
+$chart-color-3: #3F8700;
+$chart-color-4: #D3CB4F;
+$chart-color-5: #EB793E;
+$chart-color-6: #9D61CC;
+$chart-color-7: #B50000;
+$chart-color-8: #B57541;
+$chart-color-9: #53B000;
+$chart-color-10: #22767C;
+$chart-color-11: #083863;
+$chart-color-12: #00A965;
+
+// buttons
+$button-gradient-start-color: #fdfdfd;
+$button-gradient-end-color: #e6e6e6;
+$button-selected-gradient-start-color: #f1f1f1;
+$button-selected-gradient-end-color: #fefefe;
+$button-text-color: #2969c7;
+$button-selected-text-color: black;
+$control-border-color: #d2d2d2;
+
+// tables and datagrids
+$table-th-text-color: #000000;
+$table-th-border-top-bottom: 1px dotted #DBDBDB;
+$table-th-border-left-right: 1px solid #DBDBDB;
+$table-th-sort-border: 2px solid #000000;
+$table-body-text-color: #000000;
+$table-td-border-top-bottom: 1px dotted #DBDBDB;
+$table-td-border-left-right: 1px solid #DBDBDB;
+$table-row-hover-color: #F0F0F0;
+
+// fidgrid min-width
+$fidgrid-min-width: 1140px;
+
+/*
+ * Fidelity Investments Style Guide Styles
+ *
+ * Copyright 2013 Fidelity Investments
+ */
+
+/* ==========================================================================
+   Style Guide Styles
+   ========================================================================== */
+html {
+    font-family: $serif-font;
+    font-size: 93.75%; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+    -ms-text-size-adjust: 100%; /* 2 */
+}
+
+body {
+    background-color: $body-background-color;
+    font-size: 1rem;
+    font-family: $sans-font;
+}
+
+a {
+    @include standard-link-treatment;
+}
+
+a:hover {
+    @include hover-link-treatment;
+}
+
+a:active {
+    @include active-link-treatment;
+}
+
+a:focus {
+    @include focus-link-treatment;
+}
+
+h1, h2, h3, h4 {
+    font-family: $sans-font;
+}
+
+th, td {
+    text-align: left;
+}
+
+
+// More styleguide styles
+
+.legend {
+    font-size: .75em;
+    color: #666666;
+    margin-top: .9375em;
+}
+
+.attribution {
+    font-family: $sans-font;
+    color: $attribution-color;
+    text-transform: uppercase;
+    font-size: 0.666666em;
+    line-height: 1.3;
+    font-weight: bold;
+}
+
+.color-positive {
+    color: $up-color;
+}
+
+.color-negative {
+    color: $down-color;
+}
+
+.background-positive {
+    background: $up-color;
+}
+
+.background-negative {
+    background: $down-color;
+}
+
+.fid-text--right {
+    text-align: right;
+}
+
+.fid-text--left {
+    text-align: left;
+}
+
+.fid-text--strong {
+    font-weight: bold;
+}
+
+.message {
+    background: #FFF;
+    border-style: solid;
+    border-width: 2px;
+    clear: both;
+    overflow: hidden;
+    padding: 10px 10px 15px 10px;
+    margin-bottom: 18px;
+}
+
+.message--icon {
+    display: block;
+    float: left;
+    margin-top: 3px;
+}
+
+.message--content {
+    margin-left: 25px;
+}
+
+.message--title, .message--content > p, .message--list {
+    font-size: 1em;
+    font-weight: normal;
+    line-height: 1.4;
+    padding-bottom: 8px;
+}
+
+.message--list {
+    padding-left: 20px;
+}
+
+.message--list > li {
+    padding-bottom: 8px;
+    list-style: square;
+}
+
+.message--error {
+    border-color: #cc0000;
+}
+
+.message--error p, .message--error .message--title {
+    color: #cc0000;
+}
+
+.message--warning {
+    border-color: #F0D202;
+}

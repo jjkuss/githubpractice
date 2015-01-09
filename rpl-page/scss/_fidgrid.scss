@@ -1,0 +1,253 @@
+$baseFontSizePX: 15;
+$gutterPadding: 0.533 !default; //8px target requires 93.75% body font size (15px)
+$breakpointSmall: 490 / $baseFontSizePX + em !default;
+$breakpointLarge: 1500 / $baseFontSizePX + em !default;
+$designMaxWidth: 1140 / $baseFontSizePX + em !default;
+$marginBottom: 999;
+$designDenseMaxWidth: 98%;
+$useBoxsizingPolyfill: false;
+$pathToBoxsizingPolyfill: "js/vendor/boxsizing/boxsizing.htc" !default;
+
+$fixedLeftColSize: 169;
+$fixedLeftColOffsets: $fixedLeftColSize + (($gutterPadding / ($gutterPadding * 0 + 1))  * $baseFontSizePX);
+$fixedRightColSize: 256;
+$fixedRightColOffsets: $fixedRightColSize + (($gutterPadding / ($gutterPadding * 0 + 1))  * $baseFontSizePX);;
+
+// apply a natural box layout model to all elements
+// http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+*, *:before, *:after {
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
+.fidgrid--col-full {width:100%;}
+.fidgrid--col-three-quarter {width:75%;}
+.fidgrid--col-two-thirds {width:66.67%;}
+.fidgrid--col-half {width:50%;}
+.fidgrid--col-third {width:33.33%;}
+.fidgrid--col-quarter {width:25%;}
+.fidgrid--col-eighth {width:12.5%;}
+.fidgrid--col-sixteenth {width:6.25%;}
+.fidgrid, .fidgrid--row, .fidgrid--col {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    // https://github.com/Schepp/box-sizing-polyfill
+    @if $useBoxsizingPolyfill == true {
+        *behavior: url($pathToBoxsizingPolyfill);
+    }
+}
+
+.fidgrid--shadow {
+    border: 1px solid #999999\9;
+    -webkit-box-shadow: 0 0 8px 2px #999999;
+    box-shadow: 0 0 8px 2px #999999;
+    margin: 0 auto 40px;
+}
+
+.fidgrid {
+    width/*\**/: 1140px\9; //IE8 and IE7 hack to force only 1140px, no responsive or fluid behavior.
+    max-width: $designMaxWidth;
+    margin-top: 0;
+    margin-left: auto;
+    margin-bottom: 0;
+    margin-right: auto;
+
+    /* Nested Grids */
+    .fidgrid {
+        width: 100%;
+    }
+}
+
+.fidgrid--row {
+    padding: 0;
+    margin: 0;
+    overflow: visible; // override the 'rule goes to the bottom' hack
+
+    &.fidgrid--row-has-col-rules{
+        overflow:hidden; // rule goes to the bottom thingie new style
+    }
+
+    // For clearing floats like a boss h5bp.com/q
+    *zoom: 1;
+    &:before,
+    &:after {
+        display: table;
+        content: "";
+        // Fixes Opera/contenteditable bug:
+        // http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952
+        line-height: 0;
+    }
+    &:after {
+        clear: both;
+    }
+
+    &.fidgrid--row-bottom-ruled {
+        border-bottom: 1px;
+        border-bottom-style: solid;
+        border-bottom-color: #DBDBDB;
+    }
+
+    &.fidgrid--row-bottom-ruled-dotted {
+        border-bottom: 1px;
+        border-bottom-style: dotted;
+        border-bottom-color: #DBDBDB;
+    }
+
+    &.fidgrid--row-margin {
+        @include rem(margin, 0 $gutterPadding);
+    }
+
+    &.fidgrid--row-margin-right{
+        @include rem(margin-right, $gutterPadding);
+    }
+
+    &.fidgrid--row-margin-left {
+        @include rem(margin-left, $gutterPadding);
+    }   
+
+    // nested rows
+    .fidgrid--row {
+        margin-bottom: 0;
+    }
+
+    // general column selector
+    .fidgrid--col {
+        float: left;
+        @include rem(padding, $gutterPadding);
+        // padding-top: 0;
+        // @include rem(padding-right, $gutterPadding);
+        // padding-bottom: 0;
+        // @include rem(padding-left, $gutterPadding);
+        border-left-width: 1px;
+        border-left-style: none;
+        border-left-color: transparent;
+
+        // ruled columns
+        &.fidgrid--left-ruled {
+            border-left-width:1px;
+            border-left-style: solid;
+            border-left-color: #CCCCCC;
+
+            // 'rules go to the bottom' hack, only for ruled elements!
+            @include rem(margin-bottom, -$marginBottom);
+            @include rem(padding-bottom, $marginBottom);
+
+            &:first-child {
+                border-left: 1px none transparent;
+            }
+        }
+
+        &.fidgrid--right-ruled {
+            border-right-width:1px;
+            border-right-style: solid;
+            border-right-color: #CCCCCC;
+
+            // 'rules go to the bottom' hack, only for ruled elements!
+            @include rem(margin-bottom, -$marginBottom);
+            @include rem(padding-bottom, $marginBottom);
+
+            &:first-child {
+                border-left: 1px none transparent;
+            }
+        }
+
+
+
+        // remove gutters
+        &.fidgrid--nogutter {
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+
+
+    //add borders to cols
+    .fidgrid--col-border-left {
+        border-left: 1px solid #CCCCCC;
+    }
+    .fidgrid--col-border-right {
+        border-right: 1px solid #CCCCCC;
+    }    
+
+    //remove padding
+    .fidgrid--col.nopad {
+        padding:0;
+    }
+    .fidgrid--col.nopadleft {
+        padding-left:0;
+    }
+    .fidgrid--col.nopadright {
+        padding-right:0;
+    }
+    .fidgrid--col.nopadtop {
+        padding-top:0;
+    }
+    .fidgrid--col.nopadbottom {
+        padding-bottom:0;
+    }
+
+    .fidgrid--content {
+        word-wrap: break-word;
+    }
+}
+
+// accommodate fixed left and right columns
+.fidgrid--col-left-fixed {
+    @include rem(margin-right, $gutterPadding);
+    width: $fixedLeftColSize + px;
+}
+.fidgrid--col-right-fixed {
+    @include rem(margin-left, $gutterPadding);
+    width: $fixedRightColSize + px
+}
+
+.fidgrid--row-has-left-fixed > .fidgrid--col-full {
+    margin-left:-$fixedLeftColOffsets + px;
+    padding-left:$fixedLeftColOffsets + px;
+}
+
+.fidgrid--row-has-right-fixed > .fidgrid--col-full {
+    margin-right:-$fixedRightColOffsets + px;
+    padding-right:$fixedRightColOffsets + px;
+}
+
+/* IE9, IE10 */
+@media screen and (min-width: 0 \0) {
+    .fidgrid {
+        width: auto;
+    }
+}
+
+@media only screen and (max-width: $breakpointSmall) {
+    .fidgrid--row .fidgrid--col {
+        width: 100%;
+        min-width: 0;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0;
+    }
+    .fidgrid--row .fidgrid--col-left-fixed.fidgrid--col-left-fixed + .fidgrid--col,
+    .fidgrid--row .fidgrid--col-left-fixed.fidgrid--col-right-fixed + .fidgrid--col,
+    .fidgrid--row .fidgrid--col-right-fixed.fidgrid--col-left-fixed + .fidgrid--col,
+    .fidgrid--row .fidgrid--col-right-fixed.fidgrid--col-right-fixed + .fidgrid--col,
+    {
+        margin-left:0;
+        margin-right:0;
+        padding-left:0;
+        padding-right:0;
+    }
+    .fidgrid--row .fidgrid--content .fidgrid--row .fidgrid--content {
+        @include rem(padding-right, $gutterPadding);
+        @include rem(padding-left, $gutterPadding);
+    }
+}
+@media only screen and (min-width: $breakpointLarge) {
+    .fidgrid.fidgrid--dense {
+        width: $designDenseMaxWidth;
+        max-width: 2000px;
+    }
+    .fidgrid.fidgrid--dense .fidgrid {
+        width: 100%;
+        max-width: 100%;
+    }
+}
